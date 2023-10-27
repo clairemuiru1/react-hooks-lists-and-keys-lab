@@ -6,7 +6,9 @@ function ProjectItem({ name, about, technologies }) {
       <h3>{name}</h3>
       <p>{about}</p>
       <div className="technologies">
-        <p key={ProjectItem.id}>{technologies}</p>
+      {technologies.map((technology, index) => (
+          <span key={index}>{technology}</span>
+        ))}
       </div>
     </div>
   );
